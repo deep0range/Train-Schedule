@@ -28,8 +28,7 @@ var total = ("29");
 database.ref().on("child_added", function(childSnapshot) {
 	var now = moment();
     var start = moment(childSnapshot.val().start_db);
-    var difference = moment().fromNow().diff(moment(childSnapshot.val().start_db,"minutes"));
-    console.log(difference);
+    var difference = 50
 	$('.table').append("<tr style='padding: 5%'><td>" +childSnapshot.val().name_db +"</td><td>"
 	 +childSnapshot.val().destination_db +"</td><td>" +childSnapshot.val().frequency_db +"</td><td>" +total +"</td></tr>");
 	
